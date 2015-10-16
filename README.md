@@ -11,6 +11,6 @@ f3 c2
 
 f5 c1
 
-f6
+f6 c2
 
 master
