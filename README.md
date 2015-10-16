@@ -9,4 +9,6 @@ zmiany f2 c2
 
 f3 c2
 
+f4 c1 c2
+
 master
