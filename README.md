@@ -9,7 +9,7 @@ zmiany f2 c2
 
 f3 c2
 
-f5 c1
+f5 c1 r
 
 f6 c2
 
