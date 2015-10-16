@@ -7,4 +7,6 @@ coś tam
 
 zmiany f2 c2
 
+f3
+
 master
