@@ -1,0 +1,73 @@
+@use "../../../_scss/func/media";
+
+.cennik-wrapper {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 1em;
+
+  .pozycja {
+    border: 1px solid rgb(97 192 60 / 59%);
+    padding: 4px 8px;
+    border-radius: 8px;
+    margin: 4px 8px;
+    font-family: var(--font-2), serif;
+    display: grid;
+    grid-template-areas: "lab cena"
+                       "lab czas"
+                       "opi opi";
+    grid-template-columns: auto min-content;
+    grid-gap: 4px;
+
+  }
+
+  .label {
+    grid-area: lab;
+    display: flex;
+    font-weight: 600;
+
+    @include media.sm {
+      flex-direction: column;
+    }
+  }
+
+  .czas {
+    grid-area: czas;
+    //background-color: #ccffc2;
+    padding: 2px 4px;
+    //border-radius: 4px;
+    white-space: pre;
+    color: #5C5C5C;
+    font-size: .9em;
+    justify-self: end;
+  }
+
+  .cena {
+    grid-area: cena;
+    //background-color: #81dac5c2;
+    padding: 2px 4px;
+    //border-radius: 4px;
+    white-space: pre;
+    font-size: 1.2em;
+    font-weight: 600;
+    justify-self: end;
+  }
+
+  .opis {
+    grid-area: opi;
+    background-color: #0afa211c;
+    border-radius: 0 0 4px 4px;
+    padding: 4px;
+    transform: translateY(3px) scale(1.03);
+
+    display: flex;
+    @include media.sm {
+      flex-direction: column;
+    }
+  }
+
+  .naglowek-sekcji {
+    font-family: var(--font-1), serif;
+    padding: .5em 1em;
+    font-size: 1.6em;
+  }
+}

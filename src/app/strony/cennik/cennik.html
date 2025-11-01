@@ -1,0 +1,37 @@
+<div class="naglowek-podstrony">
+  Cennik
+</div>
+<main class="cennik-wrapper">
+  @for (sekcja of sekcje; track sekcja.nazwaSekcji) {
+    <div class="naglowek-sekcji">
+      {{sekcja.nazwaSekcji}}
+    </div>
+    @for (pozycja of sekcja.pozycje; track pozycja.nazwa) {
+      <div class="pozycja">
+        <div class="label">
+          @for (czescNazwy of czesciNazwy(pozycja.nazwa); track czescNazwy; let last = $last) {
+            @if (last) {
+              <div>{{czescNazwy}}</div>
+            } @else {
+              <div>{{czescNazwy}}&nbsp;</div>
+            }
+          }
+        </div>
+        <span class="czas">{{pozycja.czas}}</span>
+        <span class="cena">{{pozycja.cena}}</span>
+        @if (pozycja.opis) {
+          <div class="opis">
+            @for (czescNazwy of czesciNazwy(pozycja.opis); track czescNazwy; let last = $last) {
+              @if (last) {
+                <div>{{czescNazwy}}</div>
+              } @else {
+                <div>{{czescNazwy}}&nbsp;</div>
+              }
+            }
+          </div>
+        }
+
+      </div>
+    }
+  }
+</main>

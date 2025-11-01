@@ -1,0 +1,104 @@
+$width: 300px;
+$animation-duration: .3s;
+
+$color: #e8f1e8;
+$color-hover: #fdfffd;
+$background-color: #9bbd9b;
+
+.lewe-menu-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: $width 1fr;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &.closed {
+    display: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  &.opened {
+    display: grid;
+  }
+
+  .lewe-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    animation: l-menu-in $animation-duration ease-out;
+    color: $color;
+    font-family: var(--font-2), serif;
+    font-weight: 600;
+
+    &.closed {
+      animation: l-menu-out $animation-duration ease-out;
+    }
+
+    .naglowek {
+      font-family: var(--font-1), serif;
+      font-size: 1.5em;
+      padding: .5em 1em;
+    }
+
+    .pozycja {
+      padding: .5em 1em;
+      margin: .1em;
+      border-radius: 4px;
+
+      &.poziom-2 {
+        padding-left: 3em;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .margines {
+      flex-grow: 1;
+    }
+
+    .blok {
+      display: grid;
+      grid-template-columns: 38px 150px;
+      grid-template-rows: min-content min-content;
+      grid-template-areas: "ico lab"
+                         "ico val";
+      .ico {
+        grid-area: ico;
+        align-self: center;
+        padding-right: .5em;
+      }
+      .lab {
+        grid-area: lab;
+        font-size: .8em;
+      }
+      .val {
+        grid-area: val;
+      }
+    }
+  }
+
+  @keyframes l-menu-in {
+    0% {
+      transform: translateX(-$width);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes l-menu-out {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-$width);
+    }
+  }
+}

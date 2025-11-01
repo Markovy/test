@@ -1,0 +1,32 @@
+<div class="belka-gorna-wrapper">
+  <div class="belka-gorna">
+    <div class="margines"></div>
+    <div class="nazwa">
+      <img src="/assets/naturalis-logo-1.png" alt="Logo studia Naturalis" style="height: 9em;">
+    </div>
+    <div class="margines"></div>
+    <div class="blok ukryty-sm">
+      <img src="/assets/telefon.svg" alt="Ikona telefonu" class="ico">
+      <div class="lab">Telefon</div>
+      <div class="val">
+        <a [href]="cfgTelefonHref">{{cfgTelefon}}</a>
+      </div>
+    </div>
+    <div class="blok ukryty-sm-md-lg email">
+      <img src="/assets/malpa.svg" alt="Ikona małpki" class="ico">
+      <div class="lab">E-mail</div>
+      <div class="val">
+        <a [href]="cfgMailHref">{{cfgMail}}</a>
+      </div>
+    </div>
+    <div class="blok ukryty-sm-md godziny">
+      <img src="/assets/zegar.svg" alt="Ikona zegara" class="ico">
+      <div class="lab">Godziny otwarcia</div>
+      <div class="val">
+        <span>{{cfgGodziny}}</span>
+      </div>
+    </div>
+    <div class="margines"></div>
+  </div>
+  <nat-belka-menu></nat-belka-menu>
+</div>

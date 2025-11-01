@@ -1,0 +1,50 @@
+{
+  "pozycje": [
+    {
+      "nazwa": "STRONA GŁÓWNA",
+      "link": "/",
+      "nazwaWidoku": "strGlowna"
+    },
+    {
+      "nazwa": "USŁUGI",
+      "link": "/uslugi",
+      "nazwaWidoku": "strUslugi"
+    },
+    {
+      "nazwa": "CENNIK",
+      "link": "/cennik",
+      "nazwaWidoku": "strCennik"
+    },
+    {
+      "nazwa": "INFORMACJE",
+      "nazwaWidoku": "strInfo",
+      "submenu": [
+        {
+          "nazwa": "Masaż Kobido",
+          "link": "/informacje/kobido",
+          "nazwaWidoku": "strInfoKobido"
+        },
+        {
+          "nazwa": "Terapia manualna zatok",
+          "link": "/informacje/terapia-zatok",
+          "nazwaWidoku": "strInfoTerapiaZatok"
+        },
+        {
+          "nazwa": "Konchowanie/świecowanie uszu",
+          "link": "/informacje/konchowanie",
+          "nazwaWidoku": "strInfoKonchowanie"
+        },
+        {
+          "nazwa": "Terapia próżniowa – Bańki ogniowe/bezogniowe",
+          "link": "/informacje/terapia-prozniowa",
+          "nazwaWidoku": "strInfoTerapiaProzniowa"
+        }
+      ]
+    },
+    {
+      "nazwa": "KONTAKT",
+      "link": "/kontakt",
+      "nazwaWidoku": "strKontakt"
+    }
+  ]
+}

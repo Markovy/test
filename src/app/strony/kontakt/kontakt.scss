@@ -1,0 +1,80 @@
+@use "../../../_scss/func/media";
+
+main {
+  display: grid;
+  grid-template-areas: "adres mapa"
+                       "tel   mapa"
+                       "email mapa"
+                       "godz  mapa";
+  justify-content: center;
+  grid-row-gap: 2em;
+  padding: 8px 8px 2em 8px;
+
+  @include media.lg {
+    grid-template-areas: "adres tel"
+                         "email godz"
+                         "mapa mapa";
+  }
+
+  @include media.sm {
+    grid-template-areas: "adres"
+                         "tel"
+                         "email"
+                         "godz"
+                         "mapa";
+  }
+}
+
+.mapa {
+  grid-area: mapa;
+  display: none;
+
+  &.md {
+    justify-self: center;
+    @include media.lg {
+      display: block;
+    }
+  }
+
+  &.xl {
+    @include media.min('945px') {
+      display: block;
+    }
+  }
+}
+
+.blok-kontaktowy {
+  display: grid;
+  grid-template-columns: 48px 300px;
+  grid-template-rows: min-content min-content;
+  grid-template-areas: "ico lab"
+                       "ico val";
+  font-family: var(--font-2), serif;
+
+  &.adres {
+    grid-area: adres;
+  }
+  &.telefon {
+    grid-area: tel;
+  }
+  &.email {
+    grid-area: email;
+  }
+  &.godziny {
+    grid-area: godz;
+  }
+
+  .ico {
+    grid-area: ico;
+    align-self: center;
+    padding-right: .8em;
+  }
+  .lab {
+    grid-area: lab;
+    font-size: 1em;
+  }
+  .val {
+    grid-area: val;
+    font-size: 1.2em;
+  }
+}

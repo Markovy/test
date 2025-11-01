@@ -1,0 +1,191 @@
+@use "../../../../_scss/func/media";
+
+$color: #f7f7f7;
+$color-hover: white;
+$background-color: #537953;
+$color-podkreslenie-dost: rgba(255, 255, 255, 0.2);
+
+.belka-menu {
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 10px;
+  background-color: $background-color;
+  color: $color;
+  font-family: var(--font-2), serif;
+  font-weight: 600;
+  padding: 1em;
+  height: 60px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  position: absolute;
+  bottom: -30px;
+  left: 10%;
+  z-index: 1;
+
+  .margines {
+    flex-grow: 1;
+  }
+  .kreska {
+    width: 1px;
+    background-color: currentColor;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    /* justify-items: center; */
+    align-items: center;
+    top: -6px;
+    position: relative;
+    //width: 1.5em;
+    height: 3.5em;
+  }
+
+  .element {
+    padding: 0 .5em;
+    a {
+      cursor: pointer;
+    }
+
+    &:hover {
+      color: $color-hover;
+      .podkreslenie {
+        background-color: $color-hover;
+      }
+    }
+
+    img.ico {
+      color: $color;
+    }
+
+    &.dostepne {
+      .podkreslenie {
+        //margin-left: auto;
+        display: none;
+      }
+      &:hover {
+        .podkreslenie {
+          display: block;
+          background-color: $color-podkreslenie-dost;
+          animation: podkreslenie-in .1s ease-out;
+        }
+      }
+    }
+
+    .podkreslenie {
+      height: 5px;
+      background-color: $color;
+      animation: podkreslenie-in .3s ease-out;
+    }
+  }
+
+  @keyframes podkreslenie-in {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes podkreslenie-dost-in {
+    0% {
+      margin-top: 5px;
+      height: 0;
+    }
+    100% {
+      margin-top: 0;
+      height: 5px;
+    }
+  }
+
+  .panel-menu {
+    background-color: #668c66;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    color: $color;
+
+    .pozycja-panelu-menu {
+      margin: .2em 0;
+      padding: .5em 1em;
+      border-radius: 8px;
+      &:hover {
+        color: $color-hover;
+        background-color: rgba(255, 255, 255, .2);
+      }
+    }
+  }
+
+}
+
+
+// lewe menu
+
+$width: 300px;
+$animation-duration: .3s;
+
+$color: #e8f1e8;
+$color-hover: #fdfffd;
+$background-color: #9bbd9b;
+
+.lewe-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  color: $color;
+  font-family: var(--font-2), serif;
+  font-weight: 600;
+
+  .naglowek {
+    font-family: var(--font-1), serif;
+    font-size: 1.5em;
+    padding: .5em 1em;
+  }
+
+  .pozycja {
+    padding: .5em 1em;
+    margin: .1em;
+    border-radius: 0 4px 4px 0;
+    border-left: solid 4px transparent;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+
+    &.poziom-2 {
+      padding-left: 3em;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    &.aktualna {
+      border-left-color: $color;
+    }
+  }
+
+  .blok {
+    display: grid;
+    grid-template-columns: 38px 150px;
+    grid-template-rows: min-content min-content;
+    grid-template-areas: "ico lab"
+                         "ico val";
+    .ico {
+      grid-area: ico;
+      align-self: center;
+      padding-right: .5em;
+    }
+    .lab {
+      grid-area: lab;
+      font-size: .8em;
+    }
+    .val {
+      grid-area: val;
+    }
+  }
+}

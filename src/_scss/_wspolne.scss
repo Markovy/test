@@ -1,0 +1,35 @@
+@use "./func/media";
+
+.ukryty-lg {
+  @media (min-width: media.$lg) {
+    display: none;
+  }
+}
+
+.ukryty-md-lg {
+  @media (min-width: media.$md) {
+    display: none;
+  }
+}
+
+.ukryty-sm {
+  @include media.sm {
+    display: none !important;
+  }
+}
+
+.ukryty-sm-md {
+  @include media.md {
+    display: none !important;
+  }
+}
+
+.ukryty-sm-md-lg {
+  @include media.lg {
+    display: none !important;
+  }
+}
+
+body {
+  background-image: linear-gradient(to right top, #defff380, #d4ffcf50, #c4fcc950, #c9feeb50, #dfffd680);
+}

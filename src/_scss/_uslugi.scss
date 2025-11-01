@@ -1,0 +1,102 @@
+@use "./func/media";
+
+.uslugi {
+  display: flex;
+  flex-direction: column;
+
+  .usluga {
+    display: grid;
+    justify-content: center;
+    grid-column-gap: 1em;
+    margin-bottom: 3em;
+
+    .zdjecie {
+      grid-area: zdj;
+      img {
+        width: 220px;
+      }
+    }
+    .naglowek-uslugi {
+      grid-area: nag;
+      .pierwsza-l {
+        font-size: 1.5em;
+      }
+      padding-left: .5em;
+      font-family: var(--font-1), serif;
+      font-size: 2em;
+    }
+    .szczegoly {
+      grid-area: opi;
+      font-family: var(--font-2), serif;
+      font-size: 1.1em;
+
+      border: solid 1px #0080001a;
+      padding: 1em;
+      border-radius: 8px;
+      margin: .4em 0;
+
+      &.odstep-gorny {
+        padding-top: 1.5em;
+      }
+
+      .ikona-pozycji {
+        height: 1.1em;
+      }
+
+      .usluga-pozycja {
+        font-size: 1.2em;
+      }
+      .czas-trwania {
+        background-color: #9bbd9b90;
+        padding: 0 .2em;
+        border-radius: 4px;
+      }
+      .polecamy {
+        font-size: .8em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        background-color: #8c22a3;
+        padding: .1em .2em;
+        border-radius: 4px;
+      }
+
+      .szczegoly-i-przeciw {
+        display: flex;
+        margin-top: .2em;
+        font-weight: bold;
+        color: #39b639;
+
+        &.z-prawej {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    &.zdj-l {
+      grid-template-columns: 220px 50%;
+      grid-template-areas: "zdj nag"
+                           "zdj opi";
+
+      @include media.md {
+        padding: 0 .2em;
+        grid-template-columns: 220px 1fr;
+        grid-template-areas: "zdj nag"
+                             "opi opi";
+      }
+    }
+
+    &.zdj-r {
+      grid-template-columns: 50% 220px;
+      grid-template-areas: "nag zdj"
+                           "opi zdj";
+
+      @include media.md {
+        padding: 0 .2em;
+        grid-template-columns: 1fr 220px;
+        grid-template-areas: "nag zdj"
+                             "opi opi";
+      }
+    }
+  }
+}

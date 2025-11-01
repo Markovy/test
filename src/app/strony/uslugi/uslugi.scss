@@ -1,0 +1,9 @@
+
+@use "../../../_scss/blok-informacyjny";
+@use "../../../_scss/blok-informacyjny-uslugi";
+@use "../../../_scss/blok-informacyjny-male-zdj" as male-zdjecia;
+
+@include male-zdjecia.il-kobido();
+@include male-zdjecia.il-terapia-zatok();
+@include male-zdjecia.il-konchowanie();
+@include male-zdjecia.il-banki();

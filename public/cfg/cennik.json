@@ -1,0 +1,127 @@
+{
+  "sekcje": [
+    {
+      "nazwaSekcji": "Terapia manualna twarzy",
+      "pozycje": [
+        {
+          "nazwa": "Rytuał Kobido",
+          "czas": "60 min",
+          "cena": "200 zł"
+        },
+        {
+          "nazwa": "Rytuał Kobido\n+ serum",
+          "czas": "70 min",
+          "cena": "220 zł"
+        },
+        {
+          "nazwa": "Rytuał Kobido\n+ maska",
+          "czas": "70 min",
+          "cena": "220 zł"
+        },
+        {
+          "nazwa": "Rytuał Kobido\n+ taping estetyczny",
+          "czas": "70 min",
+          "cena": "230 zł"
+        },
+        {
+          "nazwa": "Rytuał Kobido\n+ masaż transbukalny",
+          "czas": "90 min",
+          "cena": "300 zł"
+        },
+        {
+          "nazwa": "Rytuał Kobido UP by Pan Kobido",
+          "czas": "90 min",
+          "cena": "250 zł"
+        },
+        {
+          "nazwa": "Rytuał Kobido UP by Pan Kobido\n+ serum",
+          "czas": "100 min",
+          "cena": "270 zł"
+        },
+        {
+          "nazwa": "Rytuał Kobido UP by Pan Kobido\n+ masaż transbukalny",
+          "czas": "120 min",
+          "cena": "350 zł"
+        },
+        {
+          "nazwa": "Rytuał Kobido UP Premium",
+          "czas": "110 min",
+          "cena": "280 zł"
+        },
+        {
+          "nazwa": "Rytuał Kobido UP Premium\n+ serum",
+          "czas": "110 min",
+          "cena": "300 zł"
+        },
+        {
+          "nazwa": "Masaż transbuklany - antybruksizm",
+          "czas": "40 min",
+          "cena": "180 zł"
+        }
+      ]
+    },
+    {
+      "nazwaSekcji": "Terapia manualna zatok",
+      "pozycje": [
+        {
+          "nazwa": "Terapia manualna zatok (W1)",
+          "czas": "40 min",
+          "cena": "170 zł"
+        },
+        {
+          "nazwa": "Terapia manualna zatok (W2)",
+          "czas": "70 min",
+          "cena": "200 zł"
+        },
+        {
+          "nazwa": "Terapia manualna zatok (W1)\n+ konchowanie/świecowanie uszu",
+          "czas": "75 min",
+          "cena": "240 zł"
+        },
+        {
+          "nazwa": "Konchowanie/ Świecowanie uszu",
+          "czas": "40 min",
+          "cena": "110 zł"
+        }
+      ]
+    },
+    {
+      "nazwaSekcji": "Terapia próżniowa",
+      "pozycje": [
+        {
+          "nazwa": "Bańki ogniowe",
+          "czas": "45 min",
+          "cena": "200 zł"
+        },
+        {
+          "nazwa": "Bańki próżniowe",
+          "czas": "40 min",
+          "cena": "150 zł"
+        }
+      ]
+    },
+    {
+      "nazwaSekcji": "Pakiety",
+      "pozycje": [
+        {
+          "nazwa": "Pakiet Relax",
+          "czas": "110 min",
+          "cena": "300 zł",
+          "opis": "Rytuał Kobido\n+ Bańki ogniowe/bezogniowe"
+        },
+        {
+          "nazwa": "Pakiet Zdrowie",
+          "czas": "100 min",
+          "cena": "260 zł",
+          "opis": "Konchowanie/świecowanie uszu\n+ bańki ogniowe/bezogniowe"
+        },
+        {
+          "nazwa": "Pakiet Zatoki",
+          "czas": "75 min",
+          "cena": "240 zł",
+          "opis": "Terapia manualna zatok (W1)\n+ konchowanie/świecowanie uszu"
+        }
+      ]
+    }
+  ]
+}

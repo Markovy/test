@@ -1,0 +1,93 @@
+<section class="banner-wrapper">
+  <picture class="banner-img">
+    <source srcset="/assets/banner/img-1920x700-50p.avif" type="image/avif" media="(min-width: 961px)"/>
+    <source srcset="/assets/banner/img-960x350-50p.avif" type="image/avif" media="(max-width: 960px)"/>
+    <img src="/assets/banner/img-1920x700.jpg" alt="Obraz banneru" fetchpriority="high" loading="eager"/>
+  </picture>
+  <div class="motto">
+    <div class="glowne">Relaks na własną rękę<br/>nigdy nie jest łatwy</div>
+    <div class="dodatkowe">Przyjdź i znajdź swoją oazę.<br/>Wzięcie przerwy od stresu i<br/>otaczających cię każdego
+      dnia szkodliwych czynników<br/>nigdy nie było łatwiejsze.
+    </div>
+    <div class="przyciski">
+      <a href="./uslugi">
+        <button class="pusty">Usługi &nbsp; &#8250;</button>
+      </a>
+      <span style="display: none" #booksyScript></span>
+      <span>
+        <button class="pelny" (click)="openBooksy()">ZAREZERWUJ &nbsp; &#8250;</button>
+      </span>
+    </div>
+  </div>
+</section>
+
+<main class="bloki-informacyjne" style="margin-top: 2em">
+
+  <article class="zdj-z-lewej">
+    <header><span class="pierwsza-l">M</span>asaż Kobido</header>
+    <picture>
+      <source srcset="/assets/ilustracja-kobido/img-220x330-50p.avif" type="image/avif"/>
+      <img src="/assets/ilustracja-kobido/img-667x1000.jpg" alt="Ilustracja opisu masażu kobido" class="il-kobido">
+    </picture>
+    <div class="opis">
+      Masaż Kobido to tradycyjna 😊 japońska technika masażu twarzy i karku, często nazywana niechirurgicznym
+      liftingiem twarzy.
+      Jest to naturalna i nieinwazyjna alternatywa dla zabiegów medycyny estetycznej.
+      Masaż ten działa na głębokie warstwy skóry i mięśni, co prowadzi do rozluźnienia mięśni, poprawy krążenia
+      krwi oraz usprawnienia przepływu limfy.
+      <br/><br/>
+      Zabieg składa się z kilku etapów, w tym masażu tkanek głębokich, relaksacji, drenażu limfatycznego, części
+      liftingującej oraz akupresury.
+      Efekty masażu Kobido są widoczne dość szybko i obejmują wygładzenie zmarszczek, poprawę owalu twarzy oraz
+      ogólną poprawę wyglądu i samopoczucia.
+    </div>
+  </article>
+
+  <article class="zdj-z-prawej">
+    <header><span class="pierwsza-l">T</span>erapia manualna zatok</header>
+    <picture>
+      <source srcset="/assets/ilustracja-terapia-zatok/img-220x391-50p.avif" type="image/avif"/>
+      <img src="/assets/ilustracja-terapia-zatok/img-563x1000.jpg" alt="Ilustracja opisu terapii manualnej zatok" class="il-terapia-zatok">
+    </picture>
+    <div class="opis">
+      Terapia manualna zatok to technika masażu, która ma na celu łagodzenie objawów zapalenia zatok poprzez
+      stymulację odpowiednich punktów na twarzy i głowie.
+      Masaż ten pomaga w odblokowaniu zatok, poprawie przepływu powietrza oraz usunięciu zalegającej wydzieliny.
+      <br/>
+      Podczas terapii manualnej zatok stosuje się różne techniki, takie jak:
+      <ul>
+        <li><b>Masaż tkanek głębokich</b>: pomaga w rozluźnieniu mięśni i poprawie krążenia.</li>
+        <li><b>Drenaż limfatyczny</b>: wspomaga usuwanie toksyn i nadmiaru płynów.</li>
+        <li><b>Akupresura</b>: stymuluje punkty na twarzy, co może przynieść ulgę w bólu i zmniejszyć obrzęk.
+        </li>
+      </ul>
+      Terapia manualna zatok może być szczególnie pomocna dla osób cierpiących na przewlekłe zapalenie zatok,
+      które często nawraca i powoduje ból oraz dyskomfort
+    </div>
+  </article>
+
+  <article class="zdj-z-lewej">
+    <header><span class="pierwsza-l">B</span>ańki ogniowe</header>
+    <picture>
+      <source srcset="/assets/ilustracja-banki-2/img-220x225-50p.avif" type="image/avif"/>
+      <img src="/assets/ilustracja-banki-2.jpg" alt="Ilustracja opisu baniek ogniowych" class="il-banki">
+    </picture>
+    <div class="opis">
+      Bańki ogniowe to tradycyjna metoda lecznicza, która polega na przystawianiu do skóry szklanych naczyń, w
+      których wytworzone zostało podciśnienie za pomocą ognia.
+      Podciśnienie powoduje zassanie skóry do wnętrza bańki, co prowadzi do pęknięcia podskórnych naczyń
+      krwionośnych.
+      <br/>
+      Bańki ogniowe są stosowane w celu:
+      <ul>
+        <li><b>Łagodzenia bólu</b>: Pomagają w redukcji bólu mięśniowego i stawowego.</li>
+        <li><b>Poprawy krążenia</b>: Stymulują krążenie krwi i limfy.</li>
+        <li><b>Wzmocnienia układu odpornościowego</b>: Pobudzają organizm do walki z infekcjami.</li>
+      </ul>
+      Zabieg ten jest szczególnie popularny w Tradycyjnej Medycynie Chińskiej, ale również w medycynie ludowej
+      wielu krajów.
+      Bańki ogniowe można stosować na plecach, klatce piersiowej, a także na innych częściach ciała, w zależności
+      od potrzeb terapeutycznych.
+    </div>
+  </article>
+</main>

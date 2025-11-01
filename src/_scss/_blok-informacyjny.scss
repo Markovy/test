@@ -1,0 +1,68 @@
+@use "./func/media";
+
+.bloki-informacyjne {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+
+  article {
+    display: grid;
+    justify-content: center;
+    grid-column-gap: 1em;
+    margin-bottom: 3em;
+
+    header {
+      grid-area: nag;
+      .pierwsza-l {
+        font-size: 1.5em;
+      }
+      padding-left: .5em;
+      font-family: var(--font-1), serif;
+      font-size: 2em;
+    }
+
+    picture {
+      grid-area: zdj;
+      margin: 0;
+      img {
+        width: 220px;
+      }
+    }
+    .opis {
+      grid-area: opi;
+      font-family: var(--font-2), serif;
+      font-size: 1.1em;
+
+      border: solid 1px #0080001a;
+      padding: 1em;
+      border-radius: 8px;
+      margin: .4em 0;
+    }
+
+    &.zdj-z-lewej {
+      grid-template-columns: 220px 50%;
+      grid-template-areas: "zdj nag"
+                           "zdj opi";
+
+      @include media.md {
+        padding: 0 .2em;
+        grid-template-columns: 220px 1fr;
+        grid-template-areas: "zdj nag"
+                             "opi opi";
+      }
+    }
+
+    &.zdj-z-prawej {
+      grid-template-columns: 50% 220px;
+      grid-template-areas: "nag zdj"
+                           "opi zdj";
+
+      @include media.md {
+        padding: 0 .2em;
+        grid-template-columns: 1fr 220px;
+        grid-template-areas: "nag zdj"
+                             "opi opi";
+      }
+    }
+  }
+}

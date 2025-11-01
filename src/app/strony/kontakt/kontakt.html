@@ -1,0 +1,44 @@
+<div class="naglowek-podstrony">
+  Dane kontaktowe
+</div>
+<main>
+  <div class="blok-kontaktowy adres">
+    <img src="/assets/telefon.svg" alt="Ikona telefonu" class="ico">
+    <div class="lab">Adres</div>
+    <div class="val">
+      <div>{{cfg.adresLinia1}}</div>
+      <div>{{cfg.adresLinia2}}</div>
+    </div>
+  </div>
+  <div class="blok-kontaktowy telefon">
+    <img src="/assets/telefon.svg" alt="Ikona telefonu" class="ico">
+    <div class="lab">Telefon</div>
+    <div class="val">
+      <a [href]="cfgTelefonHref">{{cfgTelefon}}</a>
+    </div>
+  </div>
+  <div class="blok-kontaktowy email">
+    <img src="/assets/malpa.svg" alt="Ikona małpki" class="ico">
+    <div class="lab">E-mail</div>
+    <div class="val">
+      <a [href]="cfgMailHref">{{cfgMail}}</a>
+    </div>
+  </div>
+  <div class="blok-kontaktowy godziny">
+    <img src="/assets/zegar.svg" alt="Ikona zegara" class="ico">
+    <div class="lab">Godziny otwarcia</div>
+    <div class="val">
+      <span>{{cfgGodziny}}</span>
+    </div>
+  </div>
+  <div class="mapa xl">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.2370588189756!2d20.9459443!3d52.329845399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ec903a2bc5fb1%3A0x8821ba15034e27c3!2sNaturalis!5e0!3m2!1spl!2spl!4v1753791811773!5m2!1spl!2spl"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="mapa md">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.2370588189756!2d20.9459443!3d52.329845399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ec903a2bc5fb1%3A0x8821ba15034e27c3!2sNaturalis!5e0!3m2!1spl!2spl!4v1753791811773!5m2!1spl!2spl"
+            width="300" height="230" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</main>

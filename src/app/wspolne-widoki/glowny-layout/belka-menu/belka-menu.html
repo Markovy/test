@@ -1,0 +1,94 @@
+<div class="belka-menu">
+  <div class="element ukryty-lg">
+    <a (click)="leftMenuVisible = true">
+      <svg width="1.5em" height="1.5em">
+        <use xlink:href="/assets/hamburger.svg#ico"></use>
+      </svg>
+    </a>
+  </div>
+  @for (p of cfg; track p.link) {
+    @if (p.submenu) {
+      <div class="element ukryty-sm-md-lg" [class.dostepne]="!nazwaWidoku().startsWith(p.nazwaWidoku)"
+           (focusin)="openMenu(p, $event)"
+           (focusout)="closeMenu(p, $event)">
+        <a tabindex="0" (mouseup)="$event.stopPropagation()">{{ p.nazwa }}</a>
+        <div class="podkreslenie"></div>
+        @if (p.opened) {
+          <div class="panel-menu">
+            @for (ps of p.submenu; track ps.link) {
+              <a [href]="ps.link" class="pozycja-panelu-menu" tabindex="0">{{ ps.nazwa }}</a>
+            }
+          </div>
+        }
+      </div>
+    } @else {
+      <div class="element ukryty-sm-md-lg" [class.dostepne]="nazwaWidoku() !== p.nazwaWidoku">
+        <a [href]="p.link" tabindex="0">{{ p.nazwa }}</a>
+        <div class="podkreslenie"></div>
+      </div>
+    }
+  }
+  <div class="margines"></div>
+  <div class="kreska"></div>
+  <div class="element">
+    <a [href]="linkFB" target="_blank">
+      <div class="social">
+        <svg width="1.5em" height="1.5em">
+          <use xlink:href="/assets/facebook.svg#ico"></use>
+        </svg>
+        <div>Facebook</div>
+      </div>
+    </a>
+  </div>
+  <div class="element">
+    <a [href]="linkInsta" target="_blank">
+      <div class="social">
+        <svg width="1.5em" height="1.5em">
+          <use xlink:href="/assets/insta.svg#ico"></use>
+        </svg>
+        <div>Instagram</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<p-drawer [(visible)]="leftMenuVisible" [closable]="false" [dt]="leftMenuDt" [blockScroll]="true">
+  <ng-template #header>
+    <div class="lewe-menu">
+      <div class="naglowek">
+        <div>Naturalis</div>
+      </div>
+    </div>
+  </ng-template>
+  <div class="lewe-menu">
+    @for (p of cfg; track p.link) {
+      @if (p.submenu) {
+        <div class="pozycja">{{ p.nazwa }}</div>
+          @for (ps of p.submenu; track ps.link) {
+            <a class="pozycja poziom-2" [href]="ps.link" [class.aktualna]="nazwaWidoku() === ps.nazwaWidoku">{{ ps.nazwa }}</a>
+          }
+      } @else {
+        <a class="pozycja" [href]="p.link" [class.aktualna]="nazwaWidoku() === p.nazwaWidoku">{{ p.nazwa }}</a>
+      }
+    }
+  </div>
+  <ng-template #footer>
+    <div class="lewe-menu">
+      <div class="pozycja blok">
+        <img src="/assets/telefon.svg" alt="Ikona telefonu" class="ico">
+        <div class="lab">Telefon</div>
+        <div class="val">
+          <a [href]="cfgTelefonHref">{{cfgTelefon}}</a>
+        </div>
+      </div>
+      <div class="pozycja blok">
+        <img src="/assets/malpa.svg" alt="Ikona małpki" class="ico">
+        <div class="lab">E-mail</div>
+        <div class="val">
+          <a [href]="cfgMailHref">{{cfgMail}}</a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+</p-drawer>

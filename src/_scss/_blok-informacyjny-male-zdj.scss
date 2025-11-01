@@ -1,0 +1,41 @@
+@use "./func/media";
+
+@mixin il-kobido {
+  .il-kobido {
+    @include media.md {
+      height: 170px;
+      object-fit: cover;
+      object-position: 0 25%;
+    }
+  }
+}
+
+@mixin il-terapia-zatok {
+  .il-terapia-zatok {
+    @include media.md {
+      height: 200px;
+      object-fit: cover;
+      object-position: 0 35%;
+    }
+  }
+}
+
+@mixin il-banki {
+  .il-banki {
+    @include media.md {
+      height: 200px;
+      object-fit: cover;
+      object-position: 0 60%;
+    }
+  }
+}
+
+@mixin il-konchowanie {
+  .il-konchowanie {
+    @include media.md {
+      height: 200px;
+      object-fit: cover;
+      object-position: 0 0;
+    }
+  }
+}

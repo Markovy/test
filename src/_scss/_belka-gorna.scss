@@ -1,0 +1,54 @@
+@use "./func/media";
+
+.belka-gorna-wrapper {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.belka-gorna {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-1), serif;
+  padding-top: .1em;
+
+  .margines {
+    flex-grow: 1;
+  }
+
+  .nazwa {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    padding-right: 2em;
+  }
+
+  .blok {
+    display: grid;
+    grid-template-columns: 38px 150px;
+    grid-template-rows: min-content min-content;
+    grid-template-areas: "ico lab"
+                         "ico val";
+    font-family: var(--font-2), serif;
+
+    &.email {
+      grid-template-columns: 38px 200px;
+    }
+
+    &.godziny {
+      grid-template-columns: 38px 180px;
+    }
+
+    .ico {
+      grid-area: ico;
+      align-self: center;
+      padding-right: .5em;
+    }
+    .lab {
+      grid-area: lab;
+      font-size: .8em;
+    }
+    .val {
+      grid-area: val;
+    }
+  }
+}

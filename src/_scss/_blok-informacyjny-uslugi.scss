@@ -1,0 +1,49 @@
+.bloki-informacyjne {
+  &.uslugi {
+    article {
+      .ikona {
+        height: 1.1em;
+      }
+
+      .pozycja {
+        font-size: 1.2em;
+      }
+
+      .wariant.odstep-gorny {
+        padding-top: 1.5em;
+      }
+
+      .label-wariantu > * {
+        margin-right: .3em;
+      }
+
+      .czas-trwania {
+        background-color: #9bbd9b90;
+        padding: 0 .2em;
+        border-radius: 4px;
+        white-space: nowrap;
+      }
+
+      .polecamy {
+        font-size: .8em;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        background-color: #8c22a3;
+        padding: .1em .2em;
+        border-radius: 4px;
+      }
+
+      .szczegoly-i-przeciw {
+        display: flex;
+        margin-top: .2em;
+        font-weight: bold;
+        color: #39b639;
+
+        &.z-prawej {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}
